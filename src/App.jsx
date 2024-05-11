@@ -112,21 +112,21 @@ const isRemoteConnected = remoteId != '' ? true : false
               <div className="w-full  h-[45%] "></div>
               <div className="w-full  h-full flex justify-center flex-wrap gap-3">
                   <Each
-                    // of={listUser?.filter((item) => item.uuid != getMachineId())}
-                    of={listUser}
+                    of={listUser?.filter((item) => item.uuid != getMachineId())}
+                    // of={listUser}
                     render={data => <div className="text-black h-20 w-20 shadow-md flex justify-center items-center">
-                      <FaCircleUser title={`connect to ${data.nama}`} id={data.uuid} onClick={e => call(e.target.id)} className="w-[81%] h-[81%] cursor-pointer"/>
+                      <FaCircleUser title={`connect to ${data.nama}`} id={data.peerid} onClick={e => call(e.target.id)} className="w-[81%] h-[81%] cursor-pointer"/>
                       </div>}
                   />
               </div>
           </div>
         </div>
-      {/* <div className="flex justify-center w-full">
+       {/* <div className="flex justify-center w-full">
         <form onSubmit={handleSubmit}>
         <input value={remoteId} onChange={(e) => setRemoteId(e.target.value)} />
         <Button htmlType="submit" >call</Button>
         </form>
-      </div> */}
+      </div>  */}
     </main>
   );
 }

@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 
 const instance = axios.create({
-  baseURL: 'https://peeridsave.test/api',
+  baseURL: 'https://mvwnwzepwi.sharedwithexpose.com/api',
   // headers: { "Access-Control-Allow-Origin": "*" },
 });
 
