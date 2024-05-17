@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Peer as PeerInit } from 'peerjs';
 import { message } from 'antd';
 
-function Peer() {
+function Peer({reFetch}) {
   const peerInstance = useRef(null);
   const remoteRef = useRef(null);
   const localRef = useRef(null);
@@ -74,6 +74,7 @@ function Peer() {
           localRef.current.play();
           
           call.answer(stream);
+          reFetch();
           setCalls((prevCalls) => ({ ...prevCalls, [call.peer]: call }));
           
           call.on('stream', (remoteStream) => {

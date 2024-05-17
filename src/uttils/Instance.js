@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 
 const instance = axios.create({
-  baseURL: 'https://wjcivhlsdk.sharedwithexpose.com/api',
+  baseURL: 'https://pdekv1heal.sharedwithexpose.com/api',
   // headers: { "Access-Control-Allow-Origin": "*" },
 });
 

@@ -17,9 +17,9 @@ import { FcEndCall } from "react-icons/fc";
 
 function App() {
 
-  const {peerId, remoteId, call, endCall, setRemoteId, localRef, remoteRef, calls} = Peer()
   const url = 'peer/list'
   const {result : listUser, getFetch, inputData, reFetch} = ApiFetch({url})
+  const {peerId, remoteId, call, endCall, setRemoteId, localRef, remoteRef, calls} = Peer({reFetch})
   const [loading, setLoading] = useState(false)
   console.log({remoteRef})
 
