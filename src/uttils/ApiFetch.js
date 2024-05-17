@@ -55,7 +55,7 @@ function ApiFetch({url, params, triggerfetch, setGlobalData}) {
             
     
     const reFetch = () => {
-      getFetch({url : result?.links?.current, setResultdata : setResult})
+      getFetch({url, setResultdata : setResult})
     }
     
     if(url){
